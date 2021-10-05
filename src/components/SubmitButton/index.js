@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from './style'
+import PropTypes from 'prop-types'
 
 export const SubmitButton = ({ disabled, children, onClick }) => {
   return (
@@ -7,4 +8,10 @@ export const SubmitButton = ({ disabled, children, onClick }) => {
       {children}
     </Button>
   )
+}
+
+SubmitButton.propTypes = {
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  children: PropTypes.node.isRequired
 }
